@@ -78,4 +78,4 @@ let g:airline_powerline_fonts = 1 "need to setup default powerline symbols from 
 let g:airline_theme='sol'
 
 " Nerdtree show hidden files
-let NERDTreeShowHidden=1
+" let NERDTreeShowHidden=1
