@@ -9,6 +9,14 @@
 5. git remote add origin git@github.com:mygithubusername/dotfiles.git 
 6. git push origin master
 
+## Setup packages
+
+1. cd ~/.vim
+2. mkdir ~/.vim/bundle
+3. git submodule add <URL> <PATH of install>
+4. git add .
+5. git commit -m "Install plugin as submodule"
+
 ## Updating git repo
 
 After making changes to file(s), 
