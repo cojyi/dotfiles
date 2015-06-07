@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/cygdrive/c/users/Colin/Documents'
+let g:netrw_dirhist_2='/cygdrive/c/users/Colin/Documents/dnvim-code'
+let g:netrw_dirhist_3='/cygdrive/c/users/Colin/Documents'
