@@ -2,18 +2,18 @@
 
 set autoindent
 set number " show line number
-set tabstop=2
-set shiftwidth=4
+set tabstop=2 " space characters inserted when tab key is pressed
+set shiftwidth=2 " space characters inserted for indentation
 set nocompatible " Disable vi-compatibility
 set backspace=2
-set autochdir
-set showcmd
+set autochdir " Auto change directory
+set showcmd " Show intermediate commands
 set laststatus=2
 set encoding=utf-8
 set ttimeoutlen=50
 
 "" Pathogen 
-"" Required for clean plugin install
+
 execute pathogen#infect()
 call pathogen#helptags() "generate helptags for everything in 'runtimepath'
 
@@ -28,7 +28,7 @@ filetype plugin indent on " plugins and filetype on
 		"" map <F12> <C-W>+
 "" endif
 
-"" function for word processor mode
+"" Word Processor mode 
 "" need to add thesaurus
 func! WordProcessorMode()
 		setlocal formatoptions=1
@@ -71,11 +71,11 @@ nnoremap <F4> :NERDTreeToggle<CR>
 " vimgrep to search for files in local parent and subdirectories
 command! -nargs=+ Grep  execute 'silent vimgrep! <args> ../**/*.md*'
 
-" Setup variables for powerline
+" Powerline
 " select a font to install into windows from .font folder
 " change font in mintty terminal settings
-let g:airline_powerline_fonts = 1 "need to setup default powerline symbols from selected font
-let g:airline_theme='sol'
+let g:airline_powerline_fonts = 1 " use default font symbols 
+let g:airline_theme='sol' " set Powerline theme
 
 " Nerdtree show hidden files
 " let NERDTreeShowHidden=1
