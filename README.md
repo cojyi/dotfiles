@@ -12,12 +12,12 @@
 ## Setup Plugins 
 
 1. cd ~/dotfiles
-2. mkdir -p ~/vim/bundle (Skip step if installing future plugins)
-3. git submodule add <URL> vim/bundle/<plugin name> 
+2. mkdir -p ~/vim/bundle (Skip step if bundle directory is already created)
+3. git submodule add "git hub URL" vim/bundle/"plugin name"
 4. git add .
 5. git commit -m "Install plugin as submodule"
 6. git push origin master
-7. run the install script
+7. run the install.sh script
 
 ## Updating git repo
 
