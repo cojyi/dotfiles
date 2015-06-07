@@ -34,9 +34,7 @@ if [ -f "${HOME}/.functions" ] ; then
 fi
 
 # activate solarized dark theme
-if [ -f "${HOME}/.solarized" ]; then
-	source "${HOME}/.solarized/sol.dark"
-fi
+sol.dark
 
 # Set PATH so it includes user's private bin if it exists
 # if [ -d "${HOME}/bin" ] ; then
