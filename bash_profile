@@ -36,6 +36,9 @@ fi
 # activate solarized dark theme
 sol.dark
 
+# activate ssh-agent
+eval $(ssh-agent -s)
+
 # Set PATH so it includes user's private bin if it exists
 # if [ -d "${HOME}/bin" ] ; then
 #   PATH="${HOME}/bin:${PATH}"
