@@ -1,10 +1,11 @@
 "" Set window settings for code and note taking
 
 set autoindent
-set tabstop=8 " Number of spaces to insert tab character
-set expandtab " Inserts spaces instead of tabs
+set tabstop=4 " Number of spaces required to insert tab character
+set noexpandtab " expandtab - works with space characters / noexpandtab - works with tab characters
 set softtabstop=4
 set shiftwidth=4
+set backspace=2 " Make backspace like work like most other apps
 set number " show line number
 set nocompatible " Disable vi-compatibility
 set autochdir " Auto change directory
@@ -13,7 +14,14 @@ set laststatus=2
 set encoding=utf-8
 set ttimeoutlen=50
 
-"" Pathogen 
+"" Shortcut to rapidly toggle `set list`
+    nmap <leader>l :set list!<CR>
+
+""  Use the same symbols as TextMate for tabstops and EOLs
+set listchars=tab:➤\ ,eol:¬
+
+
+"" Pathogen
 
 execute pathogen#infect()
 call pathogen#helptags() "generate helptags for everything in 'runtimepath'
@@ -23,24 +31,24 @@ filetype plugin indent on " plugins and filetype on
 
 "" + and - window resizing when multiple widows opened
 "" if bufwinnr(1)
-    "" map <F9> <C-W>>
-    "" map <F10> <C-W><
-    "" map <F11> <C-W>-
-    "" map <F12> <C-W>+
+	"" map <F9> <C-W>>
+	"" map <F10> <C-W><
+	"" map <F11> <C-W>-
+	"" map <F12> <C-W>+
 "" endif
 
 "" Word Processor mode 
 "" need to add thesaurus
 func! WordProcessorMode()
-    setlocal formatoptions=1
-    setlocal noexpandtab
-    map j gj
-    map k gk
-    set complete+=s
-    set formatprg=par
-    setlocal spell spelllang=en_us
-    setlocal wrap
-    setlocal linebreak
+	setlocal formatoptions=1
+	setlocal noexpandtab
+	map j gj
+	map k gk
+	set complete+=s
+	set formatprg=par
+	setlocal spell spelllang=en_us
+	setlocal wrap
+	setlocal linebreak
 endfu
 com! WP call WordProcessorMode()
 
