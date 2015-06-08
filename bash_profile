@@ -36,8 +36,9 @@ fi
 # activate solarized dark theme
 sol.dark
 
-# activate ssh-agent
-eval $(ssh-agent -s)
+# activate ssh-agent and save keys
+eval $(ssh-agent -s) > /dev/null 2>&1
+ssh-add ~/.ssh/id_rsa > /dev/null 2>&1
 
 # Set PATH so it includes user's private bin if it exists
 # if [ -d "${HOME}/bin" ] ; then

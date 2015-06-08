@@ -4,14 +4,14 @@
 
 1. cd ~/dotfiles
 2. git init
-3. git add vimrc (or any modified files)
+3. git add . 
 4. git commit -m "edited files"
-5. git remote add origin git@github.com:mygithubusername/dotfiles.git 
+5. git remote add origin git@github.com:mygithubusername/dotfiles.git (for ssh push)
 6. git push origin master
 
-## Setup Plugins 
+## Setup vim Plugins 
 
-1. cd ~/.repordir
+1. cd ~/dotfiles 
 2. mkdir -p ~/vim/bundle (Skip step if bundle directory is already created)
 3. git submodule add "git hub URL" vim/bundle/"plugin name"
 4. git add .
@@ -23,8 +23,8 @@
 
 After making changes to file(s), 
 
-1. cd ~/.repodir
-2. git add vimrc (add any other configurational files)
+1. cd ~/dotfiles
+2. git add . 
 3. git commit -m "Changed"
 4. git push origin master
 
@@ -32,8 +32,8 @@ After making changes to file(s),
 
 1. git clone git://github.com/<username>/dotfiles.git
 2. cd ~/dotfiles
-3. chmod +x makesymlinks.sh
-4. ./makesymlinks.sh
+3. chmod +x install.sh
+4. ./install.sh
 
 ## Updating a local git repo
 
