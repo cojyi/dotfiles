@@ -31,9 +31,9 @@ done
 
 # run everytime you install plugins in vim
 for folder in $folders; do
-		echo "Moving any existing dotfolders from ~ to $olddir"
-		mv ~/.$folder ~/dotfiles_bak/
-		echo "Rsyncing to $folder in home directory"
-		mkdir ~/.$folder
-		rsync -aHA $dir/$folder/ ~/.$folder
+    echo "Moving any existing dotfolders from ~ to $olddir"
+    mv ~/.$folder ~/dotfiles_bak/
+    echo "Rsyncing to $folder in home directory"
+    mkdir ~/.$folder
+    rsync -aHA $dir/$folder/ ~/.$folder
 done

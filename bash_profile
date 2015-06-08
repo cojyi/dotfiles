@@ -25,12 +25,12 @@
 
 # source the users bashrc if it exists
 if [ -f "${HOME}/.bashrc" ] ; then
-  source "${HOME}/.bashrc"
+    source "${HOME}/.bashrc"
 fi
 
 # source .functions if it exists
 if [ -f "${HOME}/.functions" ] ; then
-	source "${HOME}/.functions"
+    source "${HOME}/.functions"
 fi
 
 # activate solarized dark theme

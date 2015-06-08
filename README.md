@@ -48,27 +48,31 @@ Updated repo from original workstation but want to apply updates to another work
 ## Setup Cygwin ssh server
 
 1. Install following packages 
-	- openssh
-	- cygrunsrv
+    - openssh
+    - cygrunsrv
 
 2. ssh-host-config
-	- Should privilege separation be used? yes
-	- New local account 'sshd'? yes
-	- install sshd? yes
-	- Enter value of daemon []: binmode ntsec
-	- Create different name? no
-	- Create new priveleged user account? yes
-	- Enter password
-	- Re-enter password
+    - Should privilege separation be used? yes
+    - New local account 'sshd'? yes
+    - install sshd? yes
+    - Enter value of daemon []: binmode ntsec
+    - Create different name? no
+    - Create new priveleged user account? yes
+    - Enter password
+    - Re-enter password
 
 3. chmod 600 /etc/ssh*key
-4. chmod 600 /var/empty
-5. Configure the file /etc/sshd_config
-	- RSA Authentication
-	- PubkeyAuthentication
-	- PasswordAuthentication
-6. Allow sshd through Windows Firewall
-	- go into control panel and allow sshd from Cygwin64/usr/sbin
-7. Start sshd server (cygrunsrv -S sshd)
-8. Stop sshd server (cygrunsrv -E sshd)
 
+4. chmod 600 /var/empty
+
+5. Configure the file /etc/sshd_config
+    - RSA Authentication
+    - PubkeyAuthentication
+    - PasswordAuthentication
+
+6. Allow sshd through Windows Firewall
+    - go into control panel and allow sshd from Cygwin64/usr/sbin
+
+7. Start sshd server (cygrunsrv -S sshd)
+
+8. Stop sshd server (cygrunsrv -E sshd)

@@ -57,50 +57,30 @@ echo -ne '\eP\e]4;15;#FDF6E3\a'  # bold white   -> Base3
 
 }
 
-backup(){
-rsync -avz /cygdrive/c/users/Colin/Google_Drive /cygdrive/c/users/Colin/Documents/backup_google_drive
-
-}
-
-
-# directory change to windows environment
-# change to document folder
-
-cdd(){
-				cd /cygdrive/c/users/Colin/Documents
-}
-
-# change to google doc folder
-
-cdg(){
-				cd /cygdrive/c/users/Colin/Google_Drive
-}
-
-
 # Use this function to compile into a pdf document containing notes
 # must have pandoc and tex and required packages installed
 # Example: notes latex, notes vim
 
 notes() {
-# include if trying to exclude certain files
-# list=$(find . -name '*.tex' \( ! -iname "begin.tex" \
-# ! -iname "end.tex" \))
-# find ~\(! -regex '.*/\..*' \)
+    # include if trying to exclude certain files
+    # list=$(find . -name '*.tex' \( ! -iname "begin.tex" \
+    # ! -iname "end.tex" \))
+    # find ~\(! -regex '.*/\..*' \)
 
-NAME=notes_${1}
-# exclude all directories starting with "."
-# Thus, you cannot be in current directory to find
-getPATH=$(find ~/documents -type d -name '.*' -prune -o -name "$NAME" -print)
+    NAME=notes_${1}
+    # exclude all directories starting with "."
+    # Thus, you cannot be in current directory to find
+    getPATH=$(find ~/documents -type d -name '.*' -prune -o -name "$NAME" -print)
 
-cd $getPATH
+    cd $getPATH
 
-# list=$(find . -name '*.tex' | sort) 
-# use the above is searching for .tex files 
-# pandoc ~/functions/latex/begin.tex $list ~/functions/latex/end.tex -o ${NAME}.pdf
+    # list=$(find . -name '*.tex' | sort) 
+    # use the above is searching for .tex files 
+    # pandoc ~/functions/latex/begin.tex $list ~/functions/latex/end.tex -o ${NAME}.pdf
 
-list=$(find . -name '*.md' | sort)
+    list=$(find . -name '*.md' | sort)
 
-# pandoc compiled output must be placed in same directory
-pandoc $list -s -o ../${NAME}.pdf
-chrome ../${NAME}.pdf
+    # pandoc compiled output must be placed in same directory
+    pandoc $list -s -o ../${NAME}.pdf
+    chrome ../${NAME}.pdf
 }

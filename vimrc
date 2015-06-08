@@ -1,11 +1,12 @@
 "" Set window settings for code and note taking
 
 set autoindent
+set tabstop=8 " Number of spaces to insert tab character
+set expandtab " Inserts spaces instead of tabs
+set softtabstop=4
+set shiftwidth=4
 set number " show line number
-set tabstop=2 " space characters inserted when tab key is pressed
-set shiftwidth=2 " space characters inserted for indentation
 set nocompatible " Disable vi-compatibility
-set backspace=2
 set autochdir " Auto change directory
 set showcmd " Show intermediate commands
 set laststatus=2
@@ -22,24 +23,24 @@ filetype plugin indent on " plugins and filetype on
 
 "" + and - window resizing when multiple widows opened
 "" if bufwinnr(1)
-		"" map <F9> <C-W>>
-		"" map <F10> <C-W><
-		"" map <F11> <C-W>-
-		"" map <F12> <C-W>+
+    "" map <F9> <C-W>>
+    "" map <F10> <C-W><
+    "" map <F11> <C-W>-
+    "" map <F12> <C-W>+
 "" endif
 
 "" Word Processor mode 
 "" need to add thesaurus
 func! WordProcessorMode()
-		setlocal formatoptions=1
-		setlocal noexpandtab
-		map j gj
-		map k gk
-		set complete+=s
-		set formatprg=par
-		setlocal spell spelllang=en_us
-		setlocal wrap
-		setlocal linebreak
+    setlocal formatoptions=1
+    setlocal noexpandtab
+    map j gj
+    map k gk
+    set complete+=s
+    set formatprg=par
+    setlocal spell spelllang=en_us
+    setlocal wrap
+    setlocal linebreak
 endfu
 com! WP call WordProcessorMode()
 
