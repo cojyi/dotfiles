@@ -104,3 +104,6 @@ let g:airline_theme='sol' " set Powerline theme
 
 " Nerdtree show hidden files
 " let NERDTreeShowHidden=1
+
+let g:airline#extensions#tabline#enabled = 1 " Enable the list of buffers
+let g:airline#extensions#tabline#fnamemod = ':t' " Show just filenames

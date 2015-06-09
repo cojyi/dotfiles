@@ -6,54 +6,57 @@
 # use solarized dark theme
 sol.dark(){
 
-echo -ne   '\eP\e]10;#839496\a'  # Foreground   -> base0
-echo -ne   '\eP\e]11;#002B36\a'  # Background   -> base03
-
-echo -ne   '\eP\e]12;#DC322F\a'  # Cursor       -> red
-
-echo -ne  '\eP\e]4;0;#073642\a'  # black        -> Base02
-echo -ne  '\eP\e]4;8;#002B36\a'  # bold black   -> Base03
-echo -ne  '\eP\e]4;1;#DC322F\a'  # red          -> red
-echo -ne  '\eP\e]4;9;#CB4B16\a'  # bold red     -> orange
-echo -ne  '\eP\e]4;2;#859900\a'  # green        -> green
-echo -ne '\eP\e]4;10;#586E75\a'  # bold green   -> base01 *
-echo -ne  '\eP\e]4;3;#B58900\a'  # yellow       -> yellow
-echo -ne '\eP\e]4;11;#657B83\a'  # bold yellow  -> base00 *
-echo -ne  '\eP\e]4;4;#268BD2\a'  # blue         -> blue
-echo -ne '\eP\e]4;12;#839496\a'  # bold blue    -> base0 *
-echo -ne  '\eP\e]4;5;#D33682\a'  # magenta      -> magenta
-echo -ne '\eP\e]4;13;#6C71C4\a'  # bold magenta -> violet
-echo -ne  '\eP\e]4;6;#2AA198\a'  # cyan         -> cyan
-echo -ne '\eP\e]4;14;#93A1A1\a'  # bold cyan    -> base1 *
-echo -ne  '\eP\e]4;7;#EEE8D5\a'  # white        -> Base2
-echo -ne '\eP\e]4;15;#FDF6E3\a'  # bold white   -> Base3
+	echo -ne   '\eP\e]10;#839496\a'  # Foreground   -> base0
+	echo -ne   '\eP\e]11;#002B36\a'  # Background   -> base03
+	echo -ne   '\eP\e]12;#DC322F\a'  # Cursor       -> red
+	echo -ne  '\eP\e]4;0;#073642\a'  # black        -> Base02
+	echo -ne  '\eP\e]4;8;#002B36\a'  # bold black   -> Base03
+	echo -ne  '\eP\e]4;1;#DC322F\a'  # red          -> red
+	echo -ne  '\eP\e]4;9;#CB4B16\a'  # bold red     -> orange
+	echo -ne  '\eP\e]4;2;#859900\a'  # green        -> green
+	echo -ne '\eP\e]4;10;#586E75\a'  # bold green   -> base01 *
+	echo -ne  '\eP\e]4;3;#B58900\a'  # yellow       -> yellow
+	echo -ne '\eP\e]4;11;#657B83\a'  # bold yellow  -> base00 *
+	echo -ne  '\eP\e]4;4;#268BD2\a'  # blue         -> blue
+	echo -ne '\eP\e]4;12;#839496\a'  # bold blue    -> base0 *
+	echo -ne  '\eP\e]4;5;#D33682\a'  # magenta      -> magenta
+	echo -ne '\eP\e]4;13;#6C71C4\a'  # bold magenta -> violet
+	echo -ne  '\eP\e]4;6;#2AA198\a'  # cyan         -> cyan
+	echo -ne '\eP\e]4;14;#93A1A1\a'  # bold cyan    -> base1 *
+	echo -ne  '\eP\e]4;7;#EEE8D5\a'  # white        -> Base2
+	echo -ne '\eP\e]4;15;#FDF6E3\a'  # bold white   -> Base3
 
 }
 
 # use solarized light theme
 sol.light(){
 
-echo -ne   '\eP\e]10;#657B83\a'  # Foreground   -> base00
-echo -ne   '\eP\e]11;#FDF6E3\a'  # Background   -> base3
+	echo -ne   '\eP\e]10;#657B83\a'  # Foreground   -> base00
+	echo -ne   '\eP\e]11;#FDF6E3\a'  # Background   -> base3
+	echo -ne   '\eP\e]12;#DC322F\a'  # Cursor       -> red
+	echo -ne  '\eP\e]4;0;#073642\a'  # black        -> Base02
+	echo -ne  '\eP\e]4;8;#002B36\a'  # bold black   -> Base03
+	echo -ne  '\eP\e]4;1;#DC322F\a'  # red          -> red
+	echo -ne  '\eP\e]4;9;#CB4B16\a'  # bold red     -> orange
+	echo -ne  '\eP\e]4;2;#859900\a'  # green        -> green
+	echo -ne '\eP\e]4;10;#586E75\a'  # bold green   -> base01 *
+	echo -ne  '\eP\e]4;3;#B58900\a'  # yellow       -> yellow
+	echo -ne '\eP\e]4;11;#657B83\a'  # bold yellow  -> base00 *
+	echo -ne  '\eP\e]4;4;#268BD2\a'  # blue         -> blue
+	echo -ne '\eP\e]4;12;#839496\a'  # bold blue    -> base0 *
+	echo -ne  '\eP\e]4;5;#D33682\a'  # magenta      -> magenta
+	echo -ne '\eP\e]4;13;#6C71C4\a'  # bold magenta -> violet
+	echo -ne  '\eP\e]4;6;#2AA198\a'  # cyan         -> cyan
+	echo -ne '\eP\e]4;14;#93A1A1\a'  # bold cyan    -> base1 *
+	echo -ne  '\eP\e]4;7;#EEE8D5\a'  # white        -> Base2
+	echo -ne '\eP\e]4;15;#FDF6E3\a'  # bold white   -> Base3
 
-echo -ne   '\eP\e]12;#DC322F\a'  # Cursor       -> red
+}
+# Backup dropbox files
 
-echo -ne  '\eP\e]4;0;#073642\a'  # black        -> Base02
-echo -ne  '\eP\e]4;8;#002B36\a'  # bold black   -> Base03
-echo -ne  '\eP\e]4;1;#DC322F\a'  # red          -> red
-echo -ne  '\eP\e]4;9;#CB4B16\a'  # bold red     -> orange
-echo -ne  '\eP\e]4;2;#859900\a'  # green        -> green
-echo -ne '\eP\e]4;10;#586E75\a'  # bold green   -> base01 *
-echo -ne  '\eP\e]4;3;#B58900\a'  # yellow       -> yellow
-echo -ne '\eP\e]4;11;#657B83\a'  # bold yellow  -> base00 *
-echo -ne  '\eP\e]4;4;#268BD2\a'  # blue         -> blue
-echo -ne '\eP\e]4;12;#839496\a'  # bold blue    -> base0 *
-echo -ne  '\eP\e]4;5;#D33682\a'  # magenta      -> magenta
-echo -ne '\eP\e]4;13;#6C71C4\a'  # bold magenta -> violet
-echo -ne  '\eP\e]4;6;#2AA198\a'  # cyan         -> cyan
-echo -ne '\eP\e]4;14;#93A1A1\a'  # bold cyan    -> base1 *
-echo -ne  '\eP\e]4;7;#EEE8D5\a'  # white        -> Base2
-echo -ne '\eP\e]4;15;#FDF6E3\a'  # bold white   -> Base3
+bak() {
+
+	rsync -av ~/Dropbox/ ~/Dropbox_bak/
 
 }
 
@@ -62,25 +65,25 @@ echo -ne '\eP\e]4;15;#FDF6E3\a'  # bold white   -> Base3
 # Example: notes latex, notes vim
 
 notes() {
-    # include if trying to exclude certain files
-    # list=$(find . -name '*.tex' \( ! -iname "begin.tex" \
-    # ! -iname "end.tex" \))
-    # find ~\(! -regex '.*/\..*' \)
+	# include if trying to exclude certain files
+	# list=$(find . -name '*.tex' \( ! -iname "begin.tex" \
+	# ! -iname "end.tex" \))
+	# find ~\(! -regex '.*/\..*' \)
 
-    NAME=notes_${1}
-    # exclude all directories starting with "."
-    # Thus, you cannot be in current directory to find
-    getPATH=$(find ~/documents -type d -name '.*' -prune -o -name "$NAME" -print)
+	NAME=notes_${1}
+	# exclude all directories starting with "."
+	# Thus, you cannot be in current directory to find
+	getPATH=$(find ~/documents -type d -name '.*' -prune -o -name "$NAME" -print)
 
-    cd $getPATH
+	cd $getPATH
 
-    # list=$(find . -name '*.tex' | sort) 
-    # use the above is searching for .tex files 
-    # pandoc ~/functions/latex/begin.tex $list ~/functions/latex/end.tex -o ${NAME}.pdf
+	# list=$(find . -name '*.tex' | sort) 
+	# use the above is searching for .tex files 
+	# pandoc ~/functions/latex/begin.tex $list ~/functions/latex/end.tex -o ${NAME}.pdf
 
-    list=$(find . -name '*.md' | sort)
+	list=$(find . -name '*.md' | sort)
 
-    # pandoc compiled output must be placed in same directory
-    pandoc $list -s -o ../${NAME}.pdf
-    chrome ../${NAME}.pdf
+	# pandoc compiled output must be placed in same directory
+	pandoc $list -s -o ../${NAME}.pdf
+	chrome ../${NAME}.pdf
 }
