@@ -13,6 +13,7 @@ set showcmd " Show intermediate commands
 set laststatus=2
 set encoding=utf-8
 set ttimeoutlen=1000
+set t_Co=256
 
 "" Set Map Leader Key
 
@@ -100,7 +101,7 @@ command! -nargs=+ Grep  execute 'silent vimgrep! <args> ../**/*.md*'
 " change font in mintty terminal settings
 
 let g:airline_powerline_fonts = 1 " use default font symbols 
-let g:airline_theme='sol' " set Powerline theme
+let g:airline_theme='luna' " set Powerline theme
 
 " Nerdtree show hidden files
 " let NERDTreeShowHidden=1
