@@ -23,17 +23,17 @@ echo "...done"
 
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks 
 for file in $files; do
-    echo "Moving any existing dotfiles from ~ to $olddir"
-    mv ~/.$file ~/dotfiles_bak/
-    echo "Creating symlink to $file in home directory"
-    ln -s $dir/$file ~/.$file
+	echo "Moving any existing dotfiles from ~ to $olddir"
+	mv ~/.$file ~/dotfiles_bak/
+	echo "Creating symlink to $file in home directory"
+	ln -s $dir/$file ~/.$file
 done
 
 # run everytime you install plugins in vim
 for folder in $folders; do
-    echo "Moving any existing dotfolders from ~ to $olddir"
-    mv ~/.$folder ~/dotfiles_bak/
-    echo "Rsyncing to $folder in home directory"
-    mkdir ~/.$folder
-    rsync -aHA $dir/$folder/ ~/.$folder
+	echo "Moving any existing dotfolders from ~ to $olddir"
+	mv ~/.$folder ~/dotfiles_bak/
+	echo "Rsyncing to $folder in home directory"
+	mkdir ~/.$folder
+	rsync -aHA $dir/$folder/ ~/.$folder
 done

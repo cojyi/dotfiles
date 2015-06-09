@@ -12,14 +12,25 @@ set autochdir " Auto change directory
 set showcmd " Show intermediate commands
 set laststatus=2
 set encoding=utf-8
-set ttimeoutlen=50
+set ttimeoutlen=1000
+
+"" Set Map Leader Key
+
+let mapleader=","
+noremap \ ,
+
+"" Custom Mappings
+
+nmap <leader>o o<ESC>k
+nmap <leader>O O<ESC>j
 
 "" Shortcut to rapidly toggle `set list`
-    nmap <leader>l :set list!<CR>
+
+nmap <leader>l :set list!<CR>
 
 ""  Use the same symbols as TextMate for tabstops and EOLs
-set listchars=tab:➤\ ,eol:¬
 
+set listchars=tab:➤\ ,eol:¬
 
 "" Pathogen
 
@@ -31,6 +42,7 @@ filetype plugin indent on " plugins and filetype on
 
 "" + and - window resizing when multiple widows opened
 "" if bufwinnr(1)
+
 	"" map <F9> <C-W>>
 	"" map <F10> <C-W><
 	"" map <F11> <C-W>-
@@ -67,22 +79,26 @@ nnoremap <up> <Nop>
 " inoremap <up> <Nop> 
 
 "" Unmap the arrow keys in visual mode
+
 vnoremap <down> <Nop>
 vnoremap <left> <Nop>
 vnoremap <right> <Nop>
 vnoremap <up> <Nop>
 
 " Custom mappings 
+
 nnoremap <F2> :cprev<CR>
 nnoremap <F3> :cnext<CR>
 nnoremap <F4> :NERDTreeToggle<CR>
 
 " vimgrep to search for files in local parent and subdirectories
+
 command! -nargs=+ Grep  execute 'silent vimgrep! <args> ../**/*.md*'
 
 " Powerline
 " select a font to install into windows from .font folder
 " change font in mintty terminal settings
+
 let g:airline_powerline_fonts = 1 " use default font symbols 
 let g:airline_theme='sol' " set Powerline theme
 
