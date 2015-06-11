@@ -13,7 +13,7 @@ notes() {
 	NAME=notes_${1}
 	# exclude all directories starting with "."
 	# Thus, you cannot be in current directory to find
-	getPATH=$(find ~/documents -type d -name '.*' -prune -o -name "$NAME" -print)
+	getPATH=$(find ~/Dropbox -type d -name '.*' -prune -o -name "$NAME" -print)
 
 	cd $getPATH
 
@@ -29,7 +29,8 @@ notes() {
 }
 
 # Backup Dropbox files
+# First create a symlink connecting home documents folder to windows documents folder ex. (ln -s /media/cojyi/.../... ~/Documents)
 
 bak() {
-	rsync -av ~/Dropbox/ ~/Dropbox_bak/
-}
+	rsync -av ~/Dropbox/ ~/Documents/Dropbox_bak
+	}	
