@@ -121,7 +121,10 @@ else
 fi
 
 # activate ssh-agent and save keys
-eval $(ssh-agent -s) > /dev/null 2>&1
-ssh-add ~/.ssh/id_rsa_github > /dev/null 2>&1
+# eval $(ssh-agent -s) > /dev/null 2>&1
+# ssh-add ~/.ssh/id_rsa_github > /dev/null 2>&1
 
-
+# load custom bash functions
+if [ -f "$HOME/.functions" ] ; then
+	. "$HOME/.functions"
+fi

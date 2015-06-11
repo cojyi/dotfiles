@@ -27,3 +27,9 @@ notes() {
 	pandoc $list -s -o ../${NAME}.pdf
 	evince ../${NAME}.pdf
 }
+
+# Backup Dropbox files
+
+bak() {
+	rsync -av ~/Dropbox/ ~/Dropbox_bak/
+}
