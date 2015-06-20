@@ -126,7 +126,7 @@ if [ -f "$HOME/.functions" ] ; then
 fi
 
 # setup directory colors in bash
-eval $(dircolors ~/.dircolors/dircolors.ansi-universal)
+eval $(dircolors ~/.dircolors/dircolors.256dark)
 
 # export path
 # type sudo env PATH="$PATH" tlmgr --gui when trying to install packages
