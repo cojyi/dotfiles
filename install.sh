@@ -36,3 +36,11 @@ echo "Setting up git submodules"
 git submodule init
 git submodule update
 
+# setup gnome terminal colors
+echo "Changing gnome terminal background to solarized light"
+./bash/terminal_colors/set_light.sh
+
+# setup directory colors
+echo "setting up directory colors"
+mkdir ~/.dircolors
+cp ./bash/dir_colors/dircolors.ansi-universal/ ~/.dircolors/

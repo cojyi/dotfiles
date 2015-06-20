@@ -114,11 +114,7 @@ if ! shopt -oq posix; then
 fi
 
 # enable 256 colors in terminal
-if [ -e /usr/share/terminfo/x/xterm-256color ]; then
-	export TERM='xterm-256color'
-else
-	export TERM='xterm-color'
-fi
+export TERM='xterm-256color'
 
 # activate ssh-agent and save keys
 # eval $(ssh-agent -s) > /dev/null 2>&1
@@ -128,3 +124,10 @@ fi
 if [ -f "$HOME/.functions" ] ; then
 	. "$HOME/.functions"
 fi
+
+# setup directory colors in bash
+eval $(dircolors ~/.dircolors/dircolors.ansi-universal)
+
+# export path
+# type sudo env PATH="$PATH" tlmgr --gui when trying to install packages
+export PATH=/usr/local/texlive/2015/bin/x86_64-linux:$PATH
