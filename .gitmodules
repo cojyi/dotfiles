@@ -11,9 +11,6 @@
 [submodule "vim/bundle/nerdtree"]
 	path = vim/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
-[submodule "vim/bundle/fonts"]
-	path = vim/bundle/fonts
-	url = https://github.com/powerline/fonts.git
 [submodule "bash/terminal_colors"]
 	path = bash/terminal_colors
 	url = https://github.com/Anthony25/gnome-terminal-colors-solarized.git
