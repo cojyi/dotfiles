@@ -43,4 +43,4 @@ echo "Changing gnome terminal background to solarized light"
 # setup directory colors
 echo "setting up directory colors"
 mkdir ~/.dircolors
-cp ./bash/dir_colors/dircolors.ansi-universal/ ~/.dircolors/
+cp ./bash/dir_colors/dircolors.256dark ~/.dircolors/

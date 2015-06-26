@@ -15,16 +15,38 @@ set encoding=utf-8
 set ttimeoutlen=1000
 set t_Co=256
 set hidden " skip unsaved hidden buffers
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+set hlsearch
+
+"" Additional Settings
+
+highlight Search ctermbg=LightBlue
+
+
+"" Pathogen
+
+execute pathogen#infect()
+call pathogen#helptags() "generate helptags for everything in 'runtimepath'
+
+syntax on " enable syntax highlighting
+filetype plugin indent on " plugins and filetype on
 
 "" Set Map Leader Key
 
 let mapleader=","
 noremap \ ,
 
+"" Automatically apply vimrc changes after saving
+
+if has("autocmd")
+	autocmd bufwritepost .vimrc source $MYVIMRC
+endif
+
 "" Custom Mappings
 
 nmap <leader>o o<ESC>k
 nmap <leader>O O<ESC>j
+nmap <leader>v :tabedit $MYVIMRC<CR>
 
 "" Shortcut to rapidly toggle `set list`
 
@@ -34,13 +56,6 @@ nmap <leader>l :set list!<CR>
 
 set listchars=tab:➤\ ,eol:¬
 
-"" Pathogen
-
-execute pathogen#infect()
-call pathogen#helptags() "generate helptags for everything in 'runtimepath'
-
-syntax on " enable syntax highlighting
-filetype plugin indent on " plugins and filetype on
 
 "" + and - window resizing when multiple widows opened
 "" if bufwinnr(1)
@@ -109,3 +124,14 @@ let g:airline_theme='sol' " set Powerline theme
 
 let g:airline#extensions#tabline#enabled = 1 " Enable the list of buffers
 let g:airline#extensions#tabline#fnamemod = ':t' " Show just filenames
+
+"" Ctrl-p settings
+
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = ''
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }
