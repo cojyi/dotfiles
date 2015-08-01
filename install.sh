@@ -2,7 +2,6 @@
 
 # install.sh
 # This script creates symlinks from the home directory to any desired dotfiles in ~/dotfiles
-# Cygwin cannot symlink folders so use rsync instead for folders
 
 ########## Variables
 dir=~/dotfiles                    # dotfiles directory
