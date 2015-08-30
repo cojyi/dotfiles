@@ -17,9 +17,6 @@
 [submodule "bash/dir_colors"]
 	path = bash/dir_colors
 	url = https://github.com/seebi/dircolors-solarized.git
-[submodule "bash/powerline_fonts"]
-	path = bash/powerline_fonts
-	url = https://github.com/powerline/fonts.git
 [submodule "vim/bundle/ctrlp.vim"]
 	path = vim/bundle/ctrlp.vim
 	url = https://github.com/kien/ctrlp.vim.git
