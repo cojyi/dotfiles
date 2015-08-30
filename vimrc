@@ -46,6 +46,9 @@ endif
 
 nmap <leader>o o<ESC>k
 nmap <leader>O O<ESC>j
+nmap <leader>n :bn<CR>
+nmap <leader>p :bp<CR>
+nmap <leader>d :bd<CR>
 nmap <leader>v :tabedit $MYVIMRC<CR>
 
 "" Shortcut to rapidly toggle `set list`
@@ -106,11 +109,12 @@ vnoremap <up> <Nop>
 
 nnoremap <F2> :cprev<CR>
 nnoremap <F3> :cnext<CR>
-nnoremap <F4> :NERDTreeToggle<CR>
+nnoremap <F4> :copen<CR>
+nnoremap <F5> :NERDTreeToggle<CR>
 
 " vimgrep to search for files in local parent and subdirectories
 
-command! -nargs=+ Grep  execute 'silent vimgrep! <args> ../**/*.md*'
+command! -nargs=+ Grep  execute 'silent vimgrep! <args> ../**/*.*'
 
 " Powerline
 " select a font to install into windows from .font folder
