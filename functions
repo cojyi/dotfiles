@@ -34,3 +34,13 @@ notes() {
 bak() {
 	rsync -avr ~/Dropbox/ ~/storage/Dropbox_bak
 	}	
+
+# Archive steps
+# Plug in drives and mount them
+archive() {
+	# tarball home directory to storage folder
+	tar -cvf ~/storage/archive/$(date +"%m_%d_%y").tar ~/
+	# rsync to My passport and Seagate
+	rsync -rtvu --delete ~/storage/ /run/media/cojyi/My\ Passport/
+	rsync -rtvu --delete ~/storage/ /run/media/cojyi/Seagate/
+	}

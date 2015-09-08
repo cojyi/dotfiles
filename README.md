@@ -9,7 +9,7 @@
 5. git remote add origin git@github.com:mygithubusername/dotfiles.git (for ssh push)
 6. git push origin master
 
-## Setup vim Plugins 
+## Add git submodules
 
 1. cd ~/dotfiles 
 2. mkdir -p ~/vim/bundle (Skip step if bundle directory is already created)
@@ -18,6 +18,10 @@
 5. git commit -m "Install plugin as submodule"
 6. git push origin master
 7. run the install.sh script
+
+## Update git submodule
+
+1. git submodule update
 
 ## Updating git repo
 

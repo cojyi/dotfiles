@@ -1,12 +1,13 @@
 #!/bin/bash
 
 # install.sh
-# This script creates symlinks from the home directory to any desired dotfiles in ~/dotfiles
+# pull from github first before running this script
+# This script creates symlinks from files from pulled repo to home directory
 
 ########## Variables
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_bak             # old dotfiles backup directory
-files="profile bashrc functions vimrc vim xinitrc"    # list of files/folders to symlink in homedir
+files="profile bashrc functions vimrc vim xinitrc fonts.conf"    # list of files/folders to symlink in homedir
 
 #########
 # remove existing dotfiles_old in home dir
@@ -37,7 +38,8 @@ git submodule update
 
 # setup gnome terminal colors
 echo "Changing gnome terminal background to solarized light"
-./bash/terminal_colors/set_light.sh
+# May not be necessary on xfce terminal
+# ./bash/terminal_colors/set_light.sh
 
 # setup directory colors
 echo "setting up directory colors"
