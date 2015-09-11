@@ -7,7 +7,7 @@
 ########## Variables
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_bak             # old dotfiles backup directory
-files="profile bashrc functions vimrc vim xinitrc fonts.conf"    # list of files/folders to symlink in homedir
+files="conkyrc profile bashrc functions vimrc vim xinitrc fonts.conf"    # list of files/folders to symlink in homedir
 
 #########
 # remove existing dotfiles_old in home dir
