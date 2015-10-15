@@ -1,10 +1,12 @@
 # Swap escape and caps lock
 setxkbmap -option caps:swapescape
 
+# ibus default input method
+export GTK_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+export QT_IM_MODULE=ibus
 
-export XMODIFIERS=@im=SCIM
-export GTK_IM_MODULE="xim"
-export QT_IM_MODULE="scim"
-scim -d
+ibus-daemon -drx
 
+# start xfce desktop
 exec startxfce4
